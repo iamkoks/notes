@@ -9,11 +9,11 @@ contract NewNote {
   }
 
   mapping(string => user) public users;
-  
+
   function setUser(string memory name, string memory adress, uint number) public {
     users[name] = user(name, adress, number);
   }
-  
+
   function getUser(string memory name) public view returns(string memory adress, uint number) {
     return(users[name].name, users[name].number);
   }

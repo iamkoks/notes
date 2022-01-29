@@ -9,7 +9,7 @@ contract Grades {
   }
 
   mapping(string => Calc) public results;
-  
+
   function MyGrade (string memory title, uint grade) public {
     require(grade > 0 && grade < 11, "impossible score number");
     results[title].amount++;
